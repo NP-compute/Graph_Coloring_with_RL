@@ -1,0 +1,28 @@
+# Deep Learning Framework
+# PyTorch 2.x - Updated from legacy 1.5.0 for security and Python 3.11+ compatibility
+torch>=2.0.0,<3.0.0
+
+# Numerical Computing
+# NumPy - Compatible with PyTorch 2.x
+numpy>=1.23.0,<2.1.0
+
+# Note: The following are built-in Python modules (no installation needed):
+#   - ctypes (Python-C++ interface)
+#   - os (File system operations)
+#   - sys (System operations)
+#   - random (Random number generation)
+
+# System Dependencies (install separately):
+# - OpenMP: Required for parallel processing in C++ code
+#   Ubuntu/Debian: sudo apt-get install libomp-dev
+#   macOS: brew install libomp
+#   Windows: Included with MSVC or MinGW-w64
+#
+# - G++ with C++17 support: Required for building shared libraries
+#   Ubuntu/Debian: sudo apt-get install g++
+#   macOS: xcode-select --install
+#   Windows: Install MinGW-w64 or MSVC
+
+# Optional Dependencies:
+# - CPLEX: Commercial optimization solver for optimal coloring algorithm
+#   See: https://www.ibm.com/products/ilog-cplex-optimization-studio

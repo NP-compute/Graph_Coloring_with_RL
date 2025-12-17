@@ -1,0 +1,55 @@
+[project]
+name = "graph-coloring-rl"
+version = "1.0.0"
+description = "Solving Graph Coloring Problem with Reinforcement Learning using Deep Q-Networks"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+license = { text = "GPL-3.0" }
+authors = [
+    { name = "Project Contributors" }
+]
+keywords = ["graph-coloring", "reinforcement-learning", "deep-q-network", "combinatorial-optimization", "np-hard"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "torch>=2.0.0,<3.0.0",
+    "numpy>=1.23.0,<2.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/NP-compute/Graph_Coloring_with_RL"
+Repository = "https://github.com/NP-compute/Graph_Coloring_with_RL"
+Issues = "https://github.com/NP-compute/Graph_Coloring_with_RL/issues"
+
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ['py39', 'py310', 'py311', 'py312']
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
