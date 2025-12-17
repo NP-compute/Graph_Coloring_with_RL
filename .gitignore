@@ -9,12 +9,29 @@
 */*/*.pyc
 */*.gch.h
 */*/*.gch.h
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
 
 # Executables
 */*.out
 */*.exe
 */*/*.exe
 */*/*.out
+
+# Build artifacts
+*.o
+*.so
+*.dll
+*.dylib
+DQNet/source/*.o
+DQNet/source/*.so
 
 # Trial results
 Greedy_Coloring/Coeff_Test/*.csv
