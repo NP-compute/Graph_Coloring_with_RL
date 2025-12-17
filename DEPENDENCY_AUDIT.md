@@ -325,6 +325,16 @@ build-backend = "setuptools.build_meta"
    - Should use `os.path.join()` for cross-platform compatibility
    - Windows uses .dll, macOS uses .dylib
 
+### graph_lib.cpp
+
+1. **Line 59:** ~~`if (!f->d_name || f->d_name[0] == '.')`~~ **FIXED**
+   - **Issue:** Redundant NULL check on array address
+   - **Problem:** `d_name` is a char array (not pointer), so `!f->d_name` checks if array address is NULL (always false)
+   - **Compiler Error:** Modern GCC 13.3.0 with `-Werror` treats this as compilation error
+   - **Error Message:** `error: the address of 'dirent::d_name' will never be NULL [-Werror=address]`
+   - **Fix Applied:** Changed to `if (f->d_name[0] == '.')` - removed redundant check
+   - **Status:** ✅ Fixed and verified with compilation test
+
 ---
 
 ## Conclusion

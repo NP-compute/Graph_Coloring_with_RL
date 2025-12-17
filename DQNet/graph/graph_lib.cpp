@@ -56,7 +56,7 @@ extern "C" int* read_batch(char *location, int *size)
     {
         while (auto f = readdir(dir)) // reading file names in given direction
         {
-            if (!f->d_name || f->d_name[0] == '.')
+            if (f->d_name[0] == '.')
                 continue;
 			std::string path = string(location) + f->d_name;
 			files.push_back(path);
